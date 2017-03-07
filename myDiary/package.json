@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "webpack --config webpack.spec.ts --progress --color && karma start",
-    "start": "webpack-dev-server --inline --colors --progress --display-error-details --display-cached  --host 172.31.28.183  --content-base src",
+    "start": "webpack-dev-server --inline --colors --progress --display-error-details --display-cached  --host ec2-35-154-191-17.ap-south-1.compute.amazonaws.com  --content-base src",
     "api": "angularclass-server --api retain --port 3500"
   },
   "author": "",

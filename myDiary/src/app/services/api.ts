@@ -14,8 +14,8 @@ export class ApiService{
 
 	});
 
-	api_url: string = "http://172.31.28.183:3000/api";
-	auth_url: string= "http://172.31.28.183:3000/api";
+	api_url: string = "ec2-35-154-191-17.ap-south-1.compute.amazonaws.com:3000/api";
+	auth_url: string= "ec2-35-154-191-17.ap-south-1.compute.amazonaws.com:3000/api";
 
 	constructor (private http: Http) {
 
