@@ -1,0 +1,94 @@
+<div class="row center-xs notes"  
+			infinite-scroll
+            [infiniteScrollDistance]="1"
+            [infiniteScrollThrottle]="400"
+            (scrolled)="onScroll()"
+           
+            >
+     <!--      <div>
+           <b>User: </b>{{userName}}
+	      </div> -->
+          <div class="col-xs-8 search-div"> 
+
+                <div (click)="showSearchBox()" *ngIf="!showSearch" >    <i class="material-icons searchIcon">search</i></div>
+           		<search-field 
+           			(visibleChange)="showSearchMode($event)" 
+           			*ngIf="showSearch" 
+           			(searchKeyProvider)= "setSearchKey($event)"
+           		>
+           		</search-field>
+ 		 </div>
+
+		<div class="alert"   *ngIf="delete" >
+  		  <strong>Alert!</strong> One note has been removed.
+		</div>
+
+	      <div class="col-xs-8 creator">
+	        <note-creator (createNote)= "onCreateNote($event)" *ngIf="!showSearch" > </note-creator>
+	      </div>
+	      <div class="notes col-xs-8">
+	        <div class="row between-xs">
+	        <template ngFor [ngForOf]="notes" let-note>
+	   		 
+	          <note-card
+	          	class="{{col_xs}}" 
+	          	[note]="note"
+	            
+	            (checked) = "onNoteChecked($event)"  
+	            (showNoteDialogFire)="onDialogBoxChecked($event)"  
+	          >
+	          </note-card>
+	          <div style="clear:both;"></div>
+
+	         </template>
+
+	          <app-dialog [(visible)]="showDialog" [(noteIndex)]="indexOfNotesArray" [color]="updateNote.color" >
+  					    <div class="note-creator shadow-2" [ngStyle]="{'background-color':updateNote.color}">
+						  	 <form class="row" (submit)="onUpdateNote()">
+						  	  <input 
+						  	  		type="text"
+						  	  		 
+						  	  		[(ngModel)]="updateNote.title"
+						  	  		name= "updateNoteTitle"
+						  	  		placeholder="Title"
+						  	  		class="col-xs-10 title" 
+						  	  />
+						  	   <textarea
+						 
+						  	  		rows="10" 
+						  	  		cols="70"
+						  	        [(ngModel)]="updateNote.value"
+						  	  		name= "updateNoteValue"
+						  	  		placeholder="take a note"
+						  	  		class="col-xs-10 popuptextArea" 
+						  	  		[ngStyle]="{'background-color':updateNote.color}"
+						  	  > 
+						  	  </textarea>
+						  	  <div class="actions col-xs-12 row between-xs" >
+						  	  	<div class="col-xs-3">
+						  	  		<color-picker 
+						  	  			[colors]="colors"
+						  	  			(selected)="onColorSelect($event)" > </color-picker>
+						  	  	</div>
+						  	   <button 
+								type="submit" 
+
+						  	   	class="btn-light"
+						  	   >
+						  	   Done
+						  	   </button>
+
+						  	   </div>
+						  	  </form>
+
+						  	 </div>
+
+  					 
+			  </app-dialog>
+
+	        </div>
+	      </div>
+	           <div style="clear:both;"></div>
+	 		   <div class="content_loading col-xs-3" *ngIf="isLoadingContent" [@loadingNotationDiv] > Loading...</div>
+	 		   <div style="clear:both;"></div>
+    </div>

@@ -1,0 +1,5 @@
+ <div class="container-2 shadow-2" [@search]>
+<div  (click)="close()" aria-label="Close" class="search__close-btn"><i class="material-icons close">cancel</i></div>
+ <input type='text' name="search" id="search" placeholder="search..." class="col-xs-10 search" [(ngModel)]="searchKey" (keyup.enter)="getSearchKey()" />
+
+ </div>

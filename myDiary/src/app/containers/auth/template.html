@@ -1,0 +1,53 @@
+
+<div class="login-page center-xs middle-xs">
+ <img [src]="logoPath" alt="Diary"/> 
+  <div class="form">
+      <b class="col-xs-8 title">
+        {{mode}}
+      </b>
+    
+    <form class="login-form" #authForm="ngForm" (submit)="authenticate()" >
+      <div  class='alert' *ngIf="!validateLogin">{{error}}</div>
+  <div class="inputDiv">
+    <input
+        class="col-xs-8"
+        type="email"
+        [(ngModel)]="user.email"
+        name="email"
+        placeholder="email"
+        #email = "ngModel"
+         
+      >
+         <div class="error" [hidden]="email.valid || email.pristine" >
+           email is invalid
+         </div>
+      </div>
+      <div class="inputDiv">
+      <input
+        class="col-xs-8"
+        type="password"
+        name="passowrd"
+        [(ngModel)]="user.password"
+        placeholder="password"
+        #password = "ngModel"
+         
+      >
+      
+
+        <div class="error" [hidden]="password.valid || password.pristine" >
+          password is required
+        </div>
+      </div>
+      <div class="btn-div">
+       <button type="submit" class="btn-light" [disabled]="!authForm.form.valid" >
+            {{mode}}
+       </button>
+       </div>
+        <a class="message btn-light link" (click)= "changeMode()">
+            {{linkText}}
+          </a>
+       
+    </form>
+    
+  </div>
+</div>

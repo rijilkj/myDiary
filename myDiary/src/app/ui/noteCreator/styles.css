@@ -1,0 +1,28 @@
+.note-creator{
+     		background-color:white;
+     		padding:10px;
+       		display: block;
+		}
+
+		input[type="text"],
+		textarea {
+		  -webkit-appearance: textfield;
+		  -moz-appearance: textfield;
+		  appearance: textfield;
+		  border:none;
+		  -ms-overflow-style: none;
+  		  overflow:hidden;
+  		  resize:none;
+     	}
+
+     	textarea:focus{
+		  -webkit-appearance: textfield;
+		  -moz-appearance: textfield;
+		  appearance: textfield;
+		  border:none;
+		  outline-color: transparent;
+  		  outline-style: none;
+  		  -ms-overflow-style: none;
+  		  overflow:hidden;
+  		  resize:none;
+     	}

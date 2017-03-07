@@ -1,0 +1,83 @@
+.note-card {
+			  padding: 15px;
+			  border-radius: 2px;
+			  width: 100%;
+			  position: relative;
+			  margin:3px;
+			   -ms-word-break: break-all;
+			    word-break: break-all;
+
+			 /* Non standard for webkit */
+			     word-break: break-word;
+
+			    -webkit-hyphens: auto;
+			       -moz-hyphens: auto;
+			        -ms-hyphens: auto;
+			            hyphens: auto;
+			}
+
+			.title {
+			  font-size: 1.2rem;
+			  font-weight: bold;
+			  text-align: left;
+			  color: rgba(0,0,0,0.8);
+			}
+			.value {
+			  text-align: left;
+			  display: inline-block;
+			  font-size: 1 rem;
+			  font-weight: 250; 
+			    -ms-word-break: break-all;
+			    word-break: break-all;
+
+			 /* Non standard for webkit */
+			     word-break: break-word;
+
+			    -webkit-hyphens: auto;
+			       -moz-hyphens: auto;
+			        -ms-hyphens: auto;
+			            hyphens: auto;
+
+			      white-space: pre-line; 
+			      
+           }
+			.icon {
+			  position: absolute;
+			  color: black;
+			 
+			  background-color: transparent;
+			  font-size: 30px;
+			  top: -10px;
+			  left: -10px;
+			  width: 20px;
+			  height: 20px;
+			  border-radius: 100%;
+			  cursor: pointer; 
+
+			}
+			.setDate {
+			  position: absolute;
+			  color: black;
+			  font-size:75%;
+			  background-color: transparent;
+			  top: 10px;
+			  right: 10px;
+			  width: auto
+			  height: 20px;
+			  border-radius: 100%;
+			  cursor: pointer; 
+
+			}
+			.expand{
+				color:red;
+				cursor: pointer; 
+				text-transform: capitalize;
+				font-size: 0.8em; 
+
+			}
+			a:hover{
+				color:blue;
+			}
+			.col{
+				height: auto !important;
+			}

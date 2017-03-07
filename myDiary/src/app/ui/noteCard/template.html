@@ -1,0 +1,30 @@
+<div class="note-card row shadow-1"
+	 id="noteCardContentmain_{{note._id}}"
+	        [ngStyle] = "{'background-color': note.color}" 
+			(mouseleave) ="toggleCheck()" 
+			(mouseenter) ="toggleCheck()"  
+			(click)="onClickNoteDialogBox($event)" 
+			[@dialog] 
+			  
+		  >
+			  <div  class="icon" (click)="onChecked($event)" *ngIf="showCheck" >
+			    <i class="material-icons" style="color:#bf1b10;">cancel</i>
+			  </div>
+			  <div class='setDate'>
+			 	 {{note.createDate*1000 | date:'dd-MM-yyyy'}}
+			  </div>
+			  
+			  	<div class="col-xs-12 title"  id="noteCardContentTitle_{{note._id}}"
+			  	 
+			  	  >
+			   	 {{ note.title }}
+			 	 </div>
+ 			  	<div class="col-xs-12 value" id="noteCardContentValue_{{note._id}}"  
+ 			  	
+ 			  	  >
+ 			   	 {{note.value | truncate: noteLimitCount }}
+ 			   	 <a class="expand" *ngIf="noteLimitCountFixed > 1 && note.value.length > noteLimitCountFixed" (click)="toggleExpantion()">({{expand_text}})</a>
+			  	  
+			 	</div>
+			 
+</div>

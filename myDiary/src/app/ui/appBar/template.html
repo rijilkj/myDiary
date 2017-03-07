@@ -1,0 +1,14 @@
+<header class="app-bar row middle-xs">
+	  		<span [routerLink]="['']" class="logo col-xs-8" >
+	  		     <img [src]="logoPath" alt="Diary"/> 
+	   			 
+	  		</span>
+	  		<nav class="col-xs-4">	
+	     	     <div class="row middle-xs between-xs col-xs-12 signoutDiv"> 
+	     	        
+	     	        <span (click)="logout()" class="link">
+                   <img [src]="signOutPath" alt="SignOut" title="SignOut" /> </span>
+	      			 
+	   			 </div>
+	 		</nav>
+		</header>

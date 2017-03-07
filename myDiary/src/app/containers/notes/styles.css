@@ -1,0 +1,49 @@
+.notes {
+		   
+
+		}
+		.creator {
+		  margin-bottom: 40px; 
+		   
+		}
+		.alert {
+		    padding: 10px;
+		    background-color: #f90834;
+		    color: black;
+		    position: fixed;
+		    bottom: 5%;
+		    left: 3%;
+		    opacity: 0.7;
+		    z-index : 1;
+		   
+		    -webkit-box-shadow: 13px 15px 5px -6px rgba(0,0,0,0.29);
+			-moz-box-shadow: 13px 15px 5px -6px rgba(0,0,0,0.29);
+			box-shadow: 13px 15px 5px -6px rgba(0,0,0,0.29);
+			border-radius: 18px 15px 15px 15px;
+     
+		}
+		.content_loading{
+
+    		position: fixed;
+    		bottom: 5px;
+    		width: auto;
+    		text-align: center;
+    		left:45%;
+    		background-color: black;
+    		color:white;
+    		font-style: italic;
+    		font-size: 85%;
+    		font-family: "Times New Roman", Times, serif;
+    		font-weight: bold;
+    		border-radius: 10px 10px 10px 10px;
+    		opacity: 0.7;
+    		padding: 2px 10px 2px 10px;
+
+    		 
+
+		}
+		.searchIcon{
+			cursor: pointer;;
+		 
+		}
+	 
