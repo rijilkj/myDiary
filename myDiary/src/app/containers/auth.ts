@@ -42,13 +42,14 @@ export class Auth {
 	}
 
 	authenticate () {
-        this.validateLogin=true;
+	alert("test");
+        /*this.validateLogin=true;
         this.auth.authenticate(`/${this.mode}`, this.user)
 		.do((res: any)=>this.isValid(res))
 		.do((res: any)=>this.auth.setAuth(res))
 		.subscribe((res)=>{
 			this.auth.setAuth(res);
-			this.router.navigate([''])});	
+			this.router.navigate([''])});	*/
 	}
 	
     isValid (res){
